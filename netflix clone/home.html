@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Netflix Home</title>
+
+<style>
+body{
+background:black;
+color:white;
+font-family:Arial;
+text-align:center;
+padding-top:100px;
+}
+
+button{
+padding:10px 20px;
+background:red;
+border:none;
+color:white;
+cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Welcome to Netflix Clone</h1>
+
+<h2 id="user"></h2>
+
+<button onclick="logout()">Logout</button>
+
+<script>
+
+document.getElementById("user").innerText =
+localStorage.getItem("userEmail");
+
+function logout(){
+localStorage.removeItem("userEmail");
+window.location.href = "index.html";
+}
+
+</script>
+
+</body>
+</html>
